@@ -83,10 +83,15 @@
         sprite2.scale.set(100,100,100);
         scene.add(sprite2);
         
+       
+        var textureLoader = new THREE.TextureLoader(); 
+        var texture = textureLoader.load("do-natu.jpg"); 
+        var mat = new THREE.MeshPhongMaterial(); 
+        mat.map = texture;
        // ドーナツを作成
         const geometry = new THREE.TorusGeometry(300, 100, 64, 100);
        // マテリアルを作成
-        const material = new THREE.MeshPhongMaterial({color: 0x6699FF});
+       //const material = new THREE.MeshPhongMaterial({color: 0x6699FF});
        // メッシュを作成
         const mesh = new THREE.Mesh(geometry, material);
        // 3D空間にメッシュを追加
