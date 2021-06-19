@@ -53,7 +53,7 @@
         const material10 = new THREE.MeshPhongMaterial({color: 0x996666});
         const mesh = new THREE.Mesh(geometry10, material10);
         mesh.rotation.x = Math.PI * -0.5;
-        mesh.position.set(0,-180,150);
+        mesh.position.set(0,-150,150);
         scene.add(mesh);
   
         
@@ -70,10 +70,10 @@
         sprite01.scale.set(250,250,250);
         sprite02.scale.set(250,250,250);
         sprite03.scale.set(250,250,250);
-        sprite0.position.set(30,100,0);
-        sprite01.position.set(-30,-100,0);
-        sprite02.position.set(-300,-100,50);
-        sprite03.position.set(300,-100,0);
+        sprite0.position.set(30,-50,0);
+        sprite01.position.set(-30,-50,0);
+        sprite02.position.set(-300,-50,50);
+        sprite03.position.set(300,-50,0);
         scene.add(sprite0);
         scene.add(sprite01);
         scene.add(sprite02);
@@ -203,10 +203,8 @@
         var texture5 = textureLoader.load("img/hito.png");
         const material5 = new THREE.SpriteMaterial({ map: texture5,});
         const sprite5 = new THREE.Sprite(material5); 
-        sprite5.position.x = 0;
-        sprite5.position.y = -100
-        sprite5.position.z = 400; 
         sprite5.scale.set(150,150,150); 
+        sprite5.position.set(0,-150,400); 
         scene.add(sprite5);
         
        //クッション
@@ -219,7 +217,7 @@
         mat2.bumpscale = 0.2;
         var geometry1 = new THREE.BoxGeometry(50, 50, 50);
         var box1 = new THREE.Mesh(geometry1, mat2);　
-        box1.position.set(180,-100,400);
+        box1.position.set(180,-150,400);
         scene.add(box1);  
         
 
