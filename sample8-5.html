@@ -113,6 +113,10 @@
         var texture = textureLoader.load("img/tuki2.png"); 
         var mat = new THREE.MeshPhongMaterial(); 
         mat.map = texture;
+        // バンプマップ読み込み
+        var bump = textureLoader.load("img/tuki2-bump.png"); 
+        mat.bumpMap = bump;
+        mat.bumpscale = 0.2;
         var geometry = new THREE.SphereGeometry(80, 80, 80);
         var Sphere = new THREE.Mesh(geometry, mat); 
         Sphere.position.set(-550,300,0);
