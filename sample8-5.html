@@ -117,13 +117,14 @@
         sprite4.position.z = 0; 
         sprite4.scale.set(300,300,300); 
         scene.add(sprite4);
-        
-        var texture6 = textureLoader.load("img/tuki2.png");
-        const material6 = new THREE.SpriteMaterial({ map: texture6,});
-        const geometry = new THREE.SphereGeometry( 5, 32, 32 );
-        const material = new THREE.MeshBasicMaterial( {color: 0xFF0000} );
-        const sphere = new THREE.Mesh( geometry, material );
-        scene.add( sphere );
+
+        var texture = textureLoader.load("img/tuki2.png"); 
+        var mat = new THREE.MeshPhongMaterial(); 
+        mat.map = texture;
+        var geometry = new THREE.SphereGeometry(1, 1, 1);
+        var Sphere = new THREE.Mesh(geometry, mat); 
+        Sphere.position.z = -5;
+        scene.add(Sphere);
 
 
         //人
