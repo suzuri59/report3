@@ -121,9 +121,9 @@
         var texture = textureLoader.load("img/tuki2.png"); 
         var mat = new THREE.MeshPhongMaterial(); 
         mat.map = texture;
-        var geometry = new THREE.SphereGeometry(300, 300, 300);
+        var geometry = new THREE.SphereGeometry(100, 100, 100);
         var Sphere = new THREE.Mesh(geometry, mat); 
-        Sphere.position.set(-100,100,0);
+        Sphere.position.set(-300,100,0);
         scene.add(Sphere);
 
 
