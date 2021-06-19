@@ -194,8 +194,9 @@
         var texture6 = textureLoader.load("img/kussyon.jpg"); 
         var mat2 = new THREE.MeshPhongMaterial(); 
         mat2.map = texture;
-        var geometry1 = new THREE.BoxGeometry(100, 100, 100);
+        var geometry1 = new THREE.BoxGeometry(50, 50, 50);
         var box1 = new THREE.Mesh(geometry1, mat2);　
+        box1.position.set(180,150,150);
         scene.add(box1);  
         
 
