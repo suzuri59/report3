@@ -128,24 +128,6 @@
         Sphere.position.set(-550,300,0);
         scene.add(Sphere);
 
-        //流れ星
-        const segmentLength = 1;
-        const nbrOfPoints = 10;
-        const points = [];
-        for (let i = 0; i < nbrOfPoints; i++) {
-          points.push(i * segmentLength, 0, 0);
-        }
-        const material = new MeshLineMaterial({
-        transparent: true,
-        lineWidth: 0.1,
-        color: new Color('#ff0000'),
-        dashArray: 2,     // always has to be the double of the line
-        dashOffset: 0,    // start the dash at zero
-        dashRatio: 0.75,  // visible length range min: 0.99, max: 0.5
-      });
-        const lineMesh = new Mesh(geometry, material);
-        lineMesh.position.x = -4.5;
-
         //人
         var texture5 = textureLoader.load("img/hito.png");
         const material5 = new THREE.SpriteMaterial({ map: texture5,});
@@ -164,12 +146,8 @@
           // レンダリング
           renderer.render(scene, camera);
           requestAnimationFrame(tick);
-          if (lineMesh.material.uniforms.dashOffset.value < -2) return;
-
-          // Decrement the dashOffset value to animate the path with the dash.
-          lineMesh.material.uniforms.dashOffset.value -= 0.01;
         }
-       }
+       
       }
     </script>
   </head>
