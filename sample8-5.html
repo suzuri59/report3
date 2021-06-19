@@ -43,18 +43,11 @@
         scene.add(directionalLight2);
 
 //         // helper
-//       const gridHelper = new THREE.GridHelper(600,50); // size, step
-//       scene.add(gridHelper);
-
+      const gridHelper = new THREE.GridHelper(600,500); // size, step
+      scene.add(gridHelper);
 //       const axisHelper = new THREE.AxisHelper(600,50);
 //       scene.add(axisHelper);
-
-        var plane =  new THREE.Mesh(                                      
-             new THREE.PlaneGeometry(100, 100, 1, 1),
-              new THREE.MeshLambertMaterial({ 
-                color: 0x993333         
-                }));                      
-        scene.add(plane); 
+ 
         
         // 木0をスプライトで作成
         var textureLoader = new THREE.TextureLoader();  
@@ -132,7 +125,7 @@
         sprite5.position.x = 0;
         sprite5.position.y = 0
         sprite5.position.z = 400; 
-        sprite5.scale.set(200,20,200); 
+        sprite5.scale.set(200,200,200); 
         scene.add(sprite5);
 
         
