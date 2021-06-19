@@ -118,6 +118,17 @@
         sprite4.scale.set(300,300,300); 
         scene.add(sprite4);
 
+        //人
+        var texture5 = textureLoader.load("img/hito.png");
+        const material5 = new THREE.SpriteMaterial({ map: texture5,});
+        const sprite5 = new THREE.Sprite(material5); 
+        sprite5.position.x = 0;
+        sprite5.position.y = 0
+        sprite5.position.z = 200; 
+        sprite5.scale.set(50,50,50); 
+        scene.add(sprite5);
+
+        
 
         tick();
         // 毎フレーム時に実行されるループイベントです
