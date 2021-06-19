@@ -82,12 +82,31 @@
         sprite2.position.z = -100;
         sprite2.scale.set(100,100,100);
         scene.add(sprite2);
-
+        
+        //星
         var textureLoader = new THREE.TextureLoader();
         var texture = textureLoader.load("img/star2.png");
         const material = new THREE.SpriteMaterial({ map: texture,});
         const sprite = new THREE.Sprite(material); 
         sprite.position.x = 0;
+        sprite.position.y = 300
+        sprite.position.z = 0; 
+        sprite.scale.set(100,100,100); 
+        scene.add(sprite);
+        var textureLoader = new THREE.TextureLoader();
+        var texture = textureLoader.load("img/star2.png");
+        const material = new THREE.SpriteMaterial({ map: texture,});
+        const sprite = new THREE.Sprite(material); 
+        sprite.position.x = 100;
+        sprite.position.y = 300
+        sprite.position.z = 0; 
+        sprite.scale.set(100,100,100); 
+        scene.add(sprite);
+        var textureLoader = new THREE.TextureLoader();
+        var texture = textureLoader.load("img/star2.png");
+        const material = new THREE.SpriteMaterial({ map: texture,});
+        const sprite = new THREE.Sprite(material); 
+        sprite.position.x = -100;
         sprite.position.y = 300
         sprite.position.z = 0; 
         sprite.scale.set(100,100,100); 
