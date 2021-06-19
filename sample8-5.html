@@ -48,6 +48,13 @@
 //       const axisHelper = new THREE.AxisHelper(600,50);
 //       scene.add(axisHelper);
  
+        //地面
+        const geometry10 = new THREE.PlaneGeometry(400, 400);
+        const material10 = new THREE.MeshPhongMaterial({color: 'gray'});
+        const mesh = new THREE.Mesh(geometry10, material10);
+        mesh.rotation.x = Math.PI * -0.5;
+        scene.add(mesh);
+  
         
         // 木0をスプライトで作成
         var textureLoader = new THREE.TextureLoader();  
