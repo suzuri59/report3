@@ -65,7 +65,19 @@
         sprite01.position.y = 50;
         sprite01.position.z = 50;
         sprite01.scale.set(100,100,100);
-        scene.add(sprite0);
+        scene.add(sprite01);
+        const sprite02 = new THREE.Sprite(material0);
+        sprite02.position.x = -300;
+        sprite02.position.y = 0;
+        sprite02.position.z = 50;
+        sprite02.scale.set(150,150,150);
+        scene.add(sprite02);
+        const sprite03 = new THREE.Sprite(material0);
+        sprite03.position.x = 300;
+        sprite03.position.y = 0;
+        sprite03.position.z = 0;
+        sprite03.scale.set(150,150,150);
+        scene.add(sprite03);
 
         // 木1をスプライトで作成 
         var texture1 = textureLoader.load("img/tree1.png");
