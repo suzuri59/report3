@@ -82,15 +82,16 @@
         sprite2.position.z = -100;
         sprite2.scale.set(100,100,100);
         scene.add(sprite2);
-        
-       // ドーナツを作成
-        const geometry = new THREE.TorusGeometry(300, 100, 64, 100);
-       // マテリアルを作成
-       const material = new THREE.MeshPhongMaterial({color: 0x6699FF});
-       // メッシュを作成
-        const mesh = new THREE.Mesh(geometry, material);
-       // 3D空間にメッシュを追加
-        scene.add(mesh);
+
+        var textureLoader = new THREE.TextureLoader();
+        var texture = textureLoader.load("img/star.png");
+        const material = new THREE.SpriteMaterial({ map: texture,});
+        const sprite = new THREE.Sprite(material); 
+        sprite.position.x = 0;
+        sprite.position.y = 0;
+        sprite.position.z = 0; 
+        sprite.scale.set(100,100,100); 
+        scene.add(sprite);
 
 
         tick();
