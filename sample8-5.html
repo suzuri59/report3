@@ -195,6 +195,11 @@
         tick();
         // 毎フレーム時に実行されるループイベントです
         function tick() {
+          
+          sprite3.rotation.x += 0.1;
+          sprite31.rotation.x += 0.1;
+          sprite32.rotation.x += 0.1;
+          
           // レンダリング
           renderer.render(scene, camera);
           requestAnimationFrame(tick);
