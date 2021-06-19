@@ -18,7 +18,7 @@
         });
         renderer.setSize(width, height);
         // 背景の色を設定
-        renderer.setClearColor(0xeeeeff);
+        renderer.setClearColor(0x000000);
 
         // シーンを作成
         const scene = new THREE.Scene();
@@ -128,7 +128,7 @@
         const material5 = new THREE.SpriteMaterial({ map: texture5,});
         const sprite5 = new THREE.Sprite(material5); 
         sprite5.position.x = 0;
-        sprite5.position.y = -200
+        sprite5.position.y = -150
         sprite5.position.z = 400; 
         sprite5.scale.set(150,150,150); 
         scene.add(sprite5);
