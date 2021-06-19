@@ -201,6 +201,10 @@
         var texture6 = textureLoader.load("img/kussyon.jpg"); 
         var mat2 = new THREE.MeshPhongMaterial(); 
         mat2.map = texture6;
+        // バンプマップ読み込み
+        var bump2 = textureLoader.load("img/kussyon-bump.png"); 
+        mat2.bumpMap = bump2;
+        mat2.bumpscale = 0.2;
         var geometry1 = new THREE.BoxGeometry(50, 50, 50);
         var box1 = new THREE.Mesh(geometry1, mat2);　
         box1.position.set(180,-200,400);
