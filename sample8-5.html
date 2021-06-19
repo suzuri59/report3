@@ -167,6 +167,13 @@
         sprite41.scale.set(80,80,80); 
         scene.add(sprite41);
         
+        //星３
+        var coneGeometry = new THREE.ConeGeometry( 5, 10, 3 );
+        var coneMaterial = new THREE. MeshPhongMaterial( {color: 0x0000ff} ); 
+        var cone = new THREE.Mesh( coneGeometry, coneMaterial ); 
+        cone.position.set( 0, 150, 0 );
+        scene.add( cone );
+        
         //月
         var texture = textureLoader.load("img/tuki2.png"); 
         var mat = new THREE.MeshPhongMaterial(); 
@@ -206,8 +213,8 @@
         function tick() {
           
           Sphere.rotation.y += 0.01;
-          sprite31.rotation.y += 0.1;
-          sprite32.rotation.y += 0.1; 
+          cone.rotation.x += 0.1;
+          cone.rotation.y += 0.1; 
           // レンダリング
           renderer.render(scene, camera);
           requestAnimationFrame(tick);
