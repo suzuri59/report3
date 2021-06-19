@@ -110,13 +110,13 @@
         const material3 = new THREE.SpriteMaterial({ map: texture3,});
         const sprite3 = new THREE.Sprite(material3); 
         sprite3.position.x = 0;
-        sprite3.position.y = 350
+        sprite3.position.y = 250
         sprite3.position.z = 0; 
         sprite3.scale.set(100,100,100); 
         scene.add(sprite3);
         const sprite31 = new THREE.Sprite(material3); 
         sprite31.position.x = 300;
-        sprite31.position.y = 250
+        sprite31.position.y = 350
         sprite31.position.z = 0; 
         sprite31.scale.set(100,100,100); 
         scene.add(sprite31);
@@ -126,6 +126,22 @@
         sprite32.position.z = 0; 
         sprite32.scale.set(100,100,100); 
         scene.add(sprite32);
+        
+        //星２
+        var texture4 = textureLoader.load("img/hosi2.png");
+        const material4 = new THREE.SpriteMaterial({ map: texture4,});
+        const sprite4 = new THREE.Sprite(material4); 
+        sprite4.position.x = 150;
+        sprite4.position.y = 250
+        sprite4.position.z = 0; 
+        sprite4.scale.set(80,80,80); 
+        scene.add(sprite2);
+        const sprite41 = new THREE.Sprite(material4); 
+        sprite41.position.x = 150;
+        sprite41.position.y = 250
+        sprite41.position.z = 0; 
+        sprite41.scale.set(80,80,80); 
+        scene.add(sprite41);
         
         //月
         var texture = textureLoader.load("img/tuki2.png"); 
