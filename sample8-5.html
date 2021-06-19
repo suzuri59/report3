@@ -109,21 +109,21 @@
         sprite3.scale.set(100,100,100); 
         scene.add(sprite3);
         
-        var texture4 = textureLoader.load("img/tuki.png");
-        const material4 = new THREE.SpriteMaterial({ map: texture4,});
-        const sprite4 = new THREE.Sprite(material4); 
-        sprite4.position.x = -600;
-        sprite4.position.y = 300
-        sprite4.position.z = 0; 
-        sprite4.scale.set(300,300,300); 
-        scene.add(sprite4);
+//         var texture4 = textureLoader.load("img/tuki.png");
+//         const material4 = new THREE.SpriteMaterial({ map: texture4,});
+//         const sprite4 = new THREE.Sprite(material4); 
+//         sprite4.position.x = -600;
+//         sprite4.position.y = 300
+//         sprite4.position.z = 0; 
+//         sprite4.scale.set(300,300,300); 
+//         scene.add(sprite4);
 
         var texture = textureLoader.load("img/tuki2.png"); 
         var mat = new THREE.MeshPhongMaterial(); 
         mat.map = texture;
         var geometry = new THREE.SphereGeometry(1, 1, 1);
         var Sphere = new THREE.Mesh(geometry, mat); 
-        Sphere.position.z = -5;
+        Sphere.position.set(-100,100,0);
         scene.add(Sphere);
 
 
