@@ -168,7 +168,7 @@
         scene.add(sprite41);
         
         //星３
-        var coneGeometry = new THREE.ConeGeometry( 10, 30, 3 );
+        var coneGeometry = new THREE.ConeGeometry( 10, 20, 3 );
         var coneMaterial = new THREE. MeshPhongMaterial( {color: 0xffffcc} ); 
         var cone = new THREE.Mesh( coneGeometry, coneMaterial ); 
         cone.position.set( 0, 300, 0 );
@@ -225,6 +225,13 @@
           Sphere.rotation.y += 0.01;
           cone.rotation.x += 0.1;
           cone.rotation.y += 0.1; 
+          cone.rotation.z += 0.1; 
+          cone1.rotation.x += 0.1;
+          cone1.rotation.y += 0.1; 
+          cone1.rotation.z += 0.1; 
+          cone2.rotation.x += 0.1;
+          cone2.rotation.y += 0.1; 
+          cone2.rotation.z += 0.1; 
           // レンダリング
           renderer.render(scene, camera);
           requestAnimationFrame(tick);
