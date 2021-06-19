@@ -100,6 +100,18 @@
         sprite12.position.z = -150;
         sprite12.scale.set(100,100,100);
         scene.add(sprite12);
+        const sprite13 = new THREE.Sprite(material1);
+        sprite13.position.x = 350;
+        sprite13.position.y = -50;
+        sprite13.position.z = 0;
+        sprite13.scale.set(200,200,200);
+        scene.add(sprite13);
+        const sprite14 = new THREE.Sprite(material1);
+        sprite14.position.x = -350;
+        sprite14.position.y = -50;
+        sprite14.position.z = 0;
+        sprite14.scale.set(200,200,200);
+        scene.add(sprite14);
 
         // 木22をスプライトで作成 
         var texture2 = textureLoader.load("img/tree2.png");
