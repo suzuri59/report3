@@ -187,12 +187,12 @@
         var cone2 = new THREE.Mesh( coneGeometry, coneMaterial ); 
         cone2.position.set( 400, 300, 0 );
         scene.add( cone2 );
-        var cone = new THREE.Mesh( coneGeometry, coneMaterial ); 
-        cone.position.set( 200, 400, 0 );
-        scene.add( cone );
-        var cone = new THREE.Mesh( coneGeometry, coneMaterial ); 
-        cone.position.set( 200, 400, 0 );
-        scene.add( cone );
+        var cone3 = new THREE.Mesh( coneGeometry, coneMaterial ); 
+        cone3.position.set( 200, 400, 0 );
+        scene.add( cone3 );
+        var cone4 = new THREE.Mesh( coneGeometry, coneMaterial ); 
+        cone4.position.set( 200, 400, 0 );
+        scene.add( cone4 );
         
         //月
         var texture = textureLoader.load("img/tuki2.png"); 
@@ -243,6 +243,10 @@
           cone1.rotation.z += 0.1; 
           cone2.rotation.x += 0.1; 
           cone2.rotation.z += 0.1; 
+          cone3.rotation.x += 0.1;
+          cone3.rotation.y += 0.1; 
+          cone4.rotation.z += 0.1;
+          cone4.rotation.y += 0.1; 
           // レンダリング
           renderer.render(scene, camera);
           requestAnimationFrame(tick);
