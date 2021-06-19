@@ -109,21 +109,13 @@
         sprite3.scale.set(100,100,100); 
         scene.add(sprite3);
         
-//         var texture4 = textureLoader.load("img/tuki.png");
-//         const material4 = new THREE.SpriteMaterial({ map: texture4,});
-//         const sprite4 = new THREE.Sprite(material4); 
-//         sprite4.position.x = -600;
-//         sprite4.position.y = 300
-//         sprite4.position.z = 0; 
-//         sprite4.scale.set(300,300,300); 
-//         scene.add(sprite4);
-
+        //月
         var texture = textureLoader.load("img/tuki2.png"); 
         var mat = new THREE.MeshPhongMaterial(); 
         mat.map = texture;
         var geometry = new THREE.SphereGeometry(80, 80, 80);
         var Sphere = new THREE.Mesh(geometry, mat); 
-        Sphere.position.set(-500,300,0);
+        Sphere.position.set(-550,300,0);
         scene.add(Sphere);
 
 
@@ -132,9 +124,9 @@
         const material5 = new THREE.SpriteMaterial({ map: texture5,});
         const sprite5 = new THREE.Sprite(material5); 
         sprite5.position.x = 0;
-        sprite5.position.y = 0
+        sprite5.position.y = -200
         sprite5.position.z = 400; 
-        sprite5.scale.set(200,200,200); 
+        sprite5.scale.set(150,150,150); 
         scene.add(sprite5);
 
         
