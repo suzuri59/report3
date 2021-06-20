@@ -123,57 +123,51 @@
         var texture3 = textureLoader.load("img/hosi.png");
         const material3 = new THREE.SpriteMaterial({ map: texture3,});
         const sprite3 = new THREE.Sprite(material3); 
-        sprite3.position.x = 0;
-        sprite3.position.y = 350
-        sprite3.position.z = 0; 
-        sprite3.scale.set(100,100,100); 
-        scene.add(sprite3);
-        const sprite31 = new THREE.Sprite(material3); 
-        sprite31.position.x = 300;
-        sprite31.position.y = 350
-        sprite31.position.z = 0; 
-        sprite31.scale.set(100,100,100); 
-        scene.add(sprite31);
+        const sprite31 = new THREE.Sprite(material3);
         const sprite32 = new THREE.Sprite(material3); 
-        sprite32.position.x = -300;
-        sprite32.position.y = 350
-        sprite32.position.z = 0; 
+
+        sprite3.scale.set(100,100,100); 
+        sprite31.scale.set(100,100,100);
         sprite32.scale.set(100,100,100); 
+
+        sprite3.position.set(0,350,-50);
+        sprite31.position.set(300,350,-50);
+        sprite32.position.set(-300,350,-50);
+        
+        scene.add(sprite3);
+        scene.add(sprite31);
         scene.add(sprite32);
         
         //星２
         var texture4 = textureLoader.load("img/hosi2.png");
         const material4 = new THREE.SpriteMaterial({ map: texture4,});
         const sprite4 = new THREE.Sprite(material4); 
-        sprite4.position.x = 150;
-        sprite4.position.y = 250
-        sprite4.position.z = 0; 
+        const sprite41 = new THREE.Sprite(material4);
         sprite4.scale.set(80,80,80); 
-        scene.add(sprite4);
-        const sprite41 = new THREE.Sprite(material4); 
-        sprite41.position.x = -150;
-        sprite41.position.y = 250
-        sprite41.position.z = 0; 
         sprite41.scale.set(80,80,80); 
+        
+        sprite4.position.(-50,250,-50);
+        sprite41.position.(-150,250,-50);
+        scene.add(sprite4);
         scene.add(sprite41);
         
         //星３
         var coneGeometry = new THREE.ConeGeometry( 10, 20, 3 );
         var coneMaterial = new THREE. MeshPhongMaterial( {color: 0xffffcc} ); 
         var cone = new THREE.Mesh( coneGeometry, coneMaterial ); 
-        cone.position.set( 0, 250, 0 );
-        scene.add( cone );
-        var cone1 = new THREE.Mesh( coneGeometry, coneMaterial ); 
-        cone1.position.set( -400, 300, 0 );
-        scene.add( cone1 );
-        var cone2 = new THREE.Mesh( coneGeometry, coneMaterial ); 
-        cone2.position.set( 400, 300, 0 );
-        scene.add( cone2 );
+        var cone1 = new THREE.Mesh( coneGeometry, coneMaterial );
+        var cone2 = new THREE.Mesh( coneGeometry, coneMaterial );
         var cone3 = new THREE.Mesh( coneGeometry, coneMaterial ); 
-        cone3.position.set( 180, 350, 0 );
-        scene.add( cone3 );
         var cone4 = new THREE.Mesh( coneGeometry, coneMaterial ); 
-        cone4.position.set( -180, 350, 0 );
+        cone.position.set( 0, 250, -50 );
+        cone1.position.set( -400, 300, -50 );
+        cone2.position.set( 400, 300, -50 );
+        cone3.position.set( 180, 350, -50 );
+        cone4.position.set( -180, 350, -50 );
+        scene.add( cone );
+        scene.add( cone1 );
+        scene.add( cone2 );
+        scene.add( cone3 );
         scene.add( cone4 );
         
         //月
