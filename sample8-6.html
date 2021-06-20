@@ -109,19 +109,28 @@
         const sprite3 = new THREE.Sprite(material3); 
         const sprite31 = new THREE.Sprite(material3);
         const sprite32 = new THREE.Sprite(material3); 
-
         sprite3.scale.set(100,100,100); 
         sprite31.scale.set(100,100,100);
         sprite32.scale.set(100,100,100); 
-
-        sprite3.position.set(0,350,-50);
-        sprite31.position.set(300,350,-50);
-        sprite32.position.set(-300,350,-50);
-        
+        sprite3.position.set(0,350,-400);
+        sprite31.position.set(300,350,-400);
+        sprite32.position.set(-300,350,-400); 
         scene.add(sprite3);
         scene.add(sprite31);
         scene.add(sprite32);
 
+        //星２
+        var texture4 = textureLoader.load("img/hosi2.png");
+        const material4 = new THREE.SpriteMaterial({ map: texture4,});
+        const sprite4 = new THREE.Sprite(material4); 
+        const sprite41 = new THREE.Sprite(material4);
+        sprite4.scale.set(80,80,80); 
+        sprite41.scale.set(80,80,80); 
+        sprite4.position.set(-50,250,-400);
+        sprite41.position.set(-150,250,-400);
+        scene.add(sprite4);
+        scene.add(sprite41);
+        
         //月
         var texture = textureLoader.load("img/tuki2.png"); 
         var mat = new THREE.MeshPhongMaterial(); 
@@ -132,7 +141,7 @@
         mat.bumpscale = 0.2;
         var geometry = new THREE.SphereGeometry(80, 80, 80);
         var Sphere = new THREE.Mesh(geometry, mat); 
-        Sphere.position.set(-550,300,-100);
+        Sphere.position.set(-550,300,-400);
         scene.add(Sphere);
 
         //人
