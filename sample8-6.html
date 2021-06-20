@@ -124,12 +124,20 @@
         const material4 = new THREE.SpriteMaterial({ map: texture4,});
         const sprite4 = new THREE.Sprite(material4); 
         const sprite41 = new THREE.Sprite(material4);
+        const sprite42 = new THREE.Sprite(material4); 
+        const sprite43 = new THREE.Sprite(material4); 
         sprite4.scale.set(80,80,80); 
         sprite41.scale.set(80,80,80); 
+        sprite42.scale.set(80,80,80); 
+        sprite43.scale.set(80,80,80); 
         sprite4.position.set(150,250,-600);
         sprite41.position.set(-150,250,-600);
+        sprite42.position.set(150,450,-600);
+        sprite43.position.set(150,450,-600);
         scene.add(sprite4);
         scene.add(sprite41);
+        scene.add(sprite42);
+        scene.add(sprite43);
         
         //星３
         var coneGeometry = new THREE.ConeGeometry( 10, 20, 3 );
@@ -160,7 +168,7 @@
         mat.bumpscale = 0.2;
         var geometry = new THREE.SphereGeometry(80, 80, 80);
         var Sphere = new THREE.Mesh(geometry, mat); 
-        Sphere.position.set(-550,300,-600);
+        Sphere.position.set(-750,500,-600);
         scene.add(Sphere);
 
         //人
