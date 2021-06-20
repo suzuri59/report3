@@ -64,10 +64,10 @@
         sprite02.scale.set(250,250,250);
         sprite03.scale.set(250,250,250);
         
-        sprite0.position.set(30,-80,0);
-        sprite01.position.set(-30,-80,0);
-        sprite02.position.set(-300,-80,50);
-        sprite03.position.set(300,-80,0);
+        sprite0.position.set(30,-100,0);
+        sprite01.position.set(-30,-100,0);
+        sprite02.position.set(-300,-100,50);
+        sprite03.position.set(300,-100,0);
         
         scene.add(sprite0);
         scene.add(sprite01);
@@ -84,7 +84,7 @@
         mat.bumpscale = 0.2;
         var geometry = new THREE.SphereGeometry(80, 80, 80);
         var Sphere = new THREE.Mesh(geometry, mat); 
-        Sphere.position.set(-550,300,0);
+        Sphere.position.set(-550,300,-100);
         scene.add(Sphere);
 
         //人
@@ -105,7 +105,7 @@
         mat2.bumpscale = 0.2;
         var geometry1 = new THREE.BoxGeometry(50, 50, 50);
         var box1 = new THREE.Mesh(geometry1, mat2);　
-        box1.position.set(180,-180,400);
+        box1.position.set(180,-200,400);
         scene.add(box1);  
         
 
