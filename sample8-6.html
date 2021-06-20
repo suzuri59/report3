@@ -79,19 +79,31 @@
         sprite11.scale.set(250,250,250);
         sprite12.scale.set(250,250,250);
         sprite13.scale.set(250,250,250);
-        sprite14.scale.set(250,250,250);
-        
+        sprite14.scale.set(250,250,250);     
         sprite1.position.set(100,-100,0);
         sprite11.position.set(-100,-100,0);
         sprite12.position.set(150,-100,0);
         sprite13.position.set(-150,-100,0);
         sprite14.position.set(0,-100,0);
-       
         scene.add(sprite1);
         scene.add(sprite11);
         scene.add(sprite12);
         scene.add(sprite13);
         scene.add(sprite14);
+        
+        // 木22をスプライトで作成 
+        var texture2 = textureLoader.load("img/tree2.png");
+        const material2 = new THREE.SpriteMaterial({ map: texture2,});
+        const sprite2 = new THREE.Sprite(material2);
+        const sprite21 = new THREE.Sprite(material2);
+        sprite2.scale.set(250,250,250);
+        sprite21.scale.set(250,250,250);
+      
+        sprite2.position.set(200,-100,0);
+        sprite21.position.set(-200,-100,0);
+        
+        scene.add(sprite2);
+        scene.add(sprite21);
 
         //月
         var texture = textureLoader.load("img/tuki2.png"); 
