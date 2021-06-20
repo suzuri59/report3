@@ -11,7 +11,6 @@
         // サイズを指定
         const width = 960;
         const height = 540;
-
         // レンダラーを作成
         const renderer = new THREE.WebGLRenderer({
           canvas: document.querySelector('#myCanvas')
@@ -19,18 +18,14 @@
         renderer.setSize(width, height);
         // 背景の色を設定
         renderer.setClearColor(0x000066);
-
         // シーンを作成
         const scene = new THREE.Scene();
-
         // カメラを作成
         const camera = new THREE.PerspectiveCamera(45, width / height);
         // カメラの初期座標を設定
         camera.position.set(0, 0, 1000);
-
         // カメラコントローラーを作成
         const controls = new THREE.OrbitControls(camera,document.body);
-  
         // 平行光源1
         var directionalLight1 = new THREE.DirectionalLight(0xffffff);
         directionalLight1.position.set(100, 100, 100);
@@ -49,7 +44,7 @@
         const material10 = new THREE.MeshPhongMaterial({color: 0x996666});
         const mesh = new THREE.Mesh(geometry10, material10);
         mesh.rotation.x = Math.PI * -0.5;
-        mesh.position.set(0,-220,0);
+        mesh.position.set(0,-220,-100);
         scene.add(mesh);
         
         // 木0をスプライトで作成
@@ -63,16 +58,40 @@
         sprite01.scale.set(250,250,250);
         sprite02.scale.set(250,250,250);
         sprite03.scale.set(250,250,250);
-        
         sprite0.position.set(30,-100,0);
         sprite01.position.set(-30,-100,0);
         sprite02.position.set(-300,-100,50);
         sprite03.position.set(300,-100,0);
-        
         scene.add(sprite0);
         scene.add(sprite01);
         scene.add(sprite02);
         scene.add(sprite03);
+        
+        // 木1をスプライトで作成 
+        var texture1 = textureLoader.load("img/tree1.png");
+        const material1 = new THREE.SpriteMaterial({ map: texture1,});
+        const sprite1 = new THREE.Sprite(material1);
+        const sprite11 = new THREE.Sprite(material1);
+        const sprite12 = new THREE.Sprite(material1);
+        const sprite13 = new THREE.Sprite(material1);
+        const sprite14 = new THREE.Sprite(material1);
+        sprite1.scale.set(250,250,250);
+        sprite11.scale.set(250,250,250);
+        sprite12.scale.set(250,250,250);
+        sprite13.scale.set(250,250,250);
+        sprite14.scale.set(250,250,250);
+        
+        sprite1.position.set(100,-100,0);
+        sprite11.position.set(-100,-100,0);
+        sprite12.position.set(150,-100,0);
+        sprite13.position.set(-150,-100,0);
+        sprite14.position.set(0,-100,0);
+       
+        scene.add(sprite1);
+        scene.add(sprite11);
+        scene.add(sprite12);
+        scene.add(sprite13);
+        scene.add(sprite14);
 
         //月
         var texture = textureLoader.load("img/tuki2.png"); 
