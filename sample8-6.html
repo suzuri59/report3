@@ -109,15 +109,24 @@
         const sprite3 = new THREE.Sprite(material3); 
         const sprite31 = new THREE.Sprite(material3);
         const sprite32 = new THREE.Sprite(material3); 
+        const sprite33 = new THREE.Sprite(material3); 
+        const sprite34 = new THREE.Sprite(material3); 
         sprite3.scale.set(100,100,100); 
         sprite31.scale.set(100,100,100);
         sprite32.scale.set(100,100,100); 
+        sprite33.scale.set(100,100,100); 
+        sprite34.scale.set(100,100,100); 
+        
         sprite3.position.set(0,350,-600);
         sprite31.position.set(300,350,-600);
         sprite32.position.set(-300,350,-600); 
+        sprite33.position.set(0,600,-600);
+        sprite34.position.set(0,-600,-600);
         scene.add(sprite3);
         scene.add(sprite31);
         scene.add(sprite32);
+        scene.add(sprite33);
+        scene.add(sprite34);
 
         //星２
         var texture4 = textureLoader.load("img/hosi2.png");
@@ -133,7 +142,7 @@
         sprite4.position.set(150,250,-600);
         sprite41.position.set(-150,250,-600);
         sprite42.position.set(150,450,-600);
-        sprite43.position.set(150,450,-600);
+        sprite43.position.set(-150,450,-600);
         scene.add(sprite4);
         scene.add(sprite41);
         scene.add(sprite42);
@@ -166,7 +175,7 @@
         var bump = textureLoader.load("img/tuki2-bump.png"); 
         mat.bumpMap = bump;
         mat.bumpscale = 0.2;
-        var geometry = new THREE.SphereGeometry(80, 80, 80);
+        var geometry = new THREE.SphereGeometry(120, 120, 120);
         var Sphere = new THREE.Mesh(geometry, mat); 
         Sphere.position.set(-750,500,-600);
         scene.add(Sphere);
