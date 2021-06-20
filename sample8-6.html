@@ -131,6 +131,25 @@
         scene.add(sprite4);
         scene.add(sprite41);
         
+        //星３
+        var coneGeometry = new THREE.ConeGeometry( 20, 40, 3 );
+        var coneMaterial = new THREE. MeshPhongMaterial( {color: 0xffffcc} ); 
+        var cone = new THREE.Mesh( coneGeometry, coneMaterial ); 
+        var cone1 = new THREE.Mesh( coneGeometry, coneMaterial );
+        var cone2 = new THREE.Mesh( coneGeometry, coneMaterial );
+        var cone3 = new THREE.Mesh( coneGeometry, coneMaterial ); 
+        var cone4 = new THREE.Mesh( coneGeometry, coneMaterial ); 
+        cone.position.set( 0, 250, -600 );
+        cone1.position.set( -400, 300, -600 );
+        cone2.position.set( 400, 300, -600 );
+        cone3.position.set( 180, 350, -600 );
+        cone4.position.set( -180, 350, -600 );
+        scene.add( cone );
+        scene.add( cone1 );
+        scene.add( cone2 );
+        scene.add( cone3 );
+        scene.add( cone4 );
+        
         //月
         var texture = textureLoader.load("img/tuki2.png"); 
         var mat = new THREE.MeshPhongMaterial(); 
