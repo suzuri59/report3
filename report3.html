@@ -36,6 +36,7 @@
         directionalLight2.position.set(-100, 100, 100);
         // シーンに追加
         scene.add(directionalLight2);
+        renderer.shadowMap.enabled = true;
         
         var textureLoader = new THREE.TextureLoader();  
         
@@ -229,8 +230,8 @@
         var box1 = new THREE.Mesh(geometry1, mat2);　
         box1.position.set(155,-200,400);
         scene.add(box1);  
+       
         
-
         tick();
         
         // 毎フレーム時に実行されるループイベントです
