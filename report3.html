@@ -40,6 +40,9 @@
         var textureLoader = new THREE.TextureLoader();  
         
         //地面
+        var texture0 = textureLoader.load("img/zimen.jpg"); 
+        var mat0 = new THREE.MeshPhongMaterial(); 
+        mat0.map = texture0;
         const geometry10 = new THREE.PlaneGeometry(1800, 1800);
         const material10 = new THREE.MeshPhongMaterial({color: 0x996666});
         const mesh = new THREE.Mesh(geometry10, material10);
